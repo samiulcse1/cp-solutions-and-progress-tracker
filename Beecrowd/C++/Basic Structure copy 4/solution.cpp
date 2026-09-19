@@ -21,13 +21,10 @@ int main()
   {
     cout << ":)" << endl;
   }
-
-
-
-
-
-
-
+  else if (a < b && (b < c) && (c - b) >= (b - a)) // fourth figure
+  {
+    cout << ":)" << endl;
+  }
 
   return 0;
 }
