@@ -35,7 +35,7 @@ int main()
   {
     cout << ":)" << endl;
   }
-  else if ((a == b) && (b > c))
+  else if ((a == b) && (b >= c))
   {
     cout << ":(" << endl;
   }
