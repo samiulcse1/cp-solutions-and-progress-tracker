@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 
-    int t;
+    long long t;
     cin >> t;
 
     while (t--)
@@ -14,6 +14,8 @@ int main()
         {
             cin >> a[i];
         }
+        long long difference = max(abs(a[0] - a[1]), abs(a[0] + a[2] - a[1]));
+        cout << difference << endl;
     }
 
     return 0;
