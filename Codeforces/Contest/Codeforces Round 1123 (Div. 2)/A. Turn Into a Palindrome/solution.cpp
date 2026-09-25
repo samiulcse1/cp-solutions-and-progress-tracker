@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int main()
+#define int long long
+signed main()
 {
+    cout << "oiuhisdgd" << endl;
 
     return 0;
 }
