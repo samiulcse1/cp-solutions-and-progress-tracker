@@ -4,7 +4,8 @@ using namespace std;
 signed main()
 {
 
-    int n;
 
+    
+    
     return 0;
 }
