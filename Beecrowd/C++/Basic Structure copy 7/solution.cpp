@@ -4,5 +4,15 @@ using namespace std;
 signed main()
 {
 
+    int n;
+    cin >> n;
+    string vec;
+    while (n--)
+    {
+
+        getline(cin, vec);
+    }
+    cout << "Ciencia da Computacao" << endl;
+
     return 0;
 }
