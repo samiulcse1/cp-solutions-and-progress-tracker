@@ -7,6 +7,7 @@ signed main()
     int n;
     cin >> n;
     string vec;
+    cin.ignore();
     while (n--)
     {
 
