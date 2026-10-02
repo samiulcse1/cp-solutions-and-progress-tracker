@@ -9,9 +9,7 @@ signed main()
     {
         int kk;
         cin >> kk;
-        kk < 2015 ? cout << 2015 - kk << "  D.C.\n" : cout << kk - 2014 << "  A.C.\n";
-
-    
+        kk < 2015 ? cout << 2015 - kk << " D.C.\n" : cout << kk - 2014 << " A.C.\n";
     }
     return 0;
 }
