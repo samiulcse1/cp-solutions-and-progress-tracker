@@ -6,7 +6,7 @@ signed main()
     int x;
     cin >> x;
 
-    vector<pair<int, string>> roman = {
+    vector<pair<int, string>> vec = {
         {1000, "M"},
         {900, "CM"},
         {500, "D"},
