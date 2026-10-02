@@ -10,13 +10,13 @@ signed main()
     for (int i = 0; i < n; i++)
     {
         cin >> vec[i];
+        vec[i] = (vec[i]);
     }
     int st = 0;
     for (int i = 0; i < vec.size() - 1; i++)
     {
-        if ((vec[i + 1] - vec[i]) > s)
+        if ((abs(vec[i] - vec[i + 1])) > s)
         {
-
             st = 1;
             break;
         }
