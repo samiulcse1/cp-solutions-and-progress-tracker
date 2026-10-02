@@ -20,6 +20,15 @@ signed main()
         {5, "V"},
         {4, "IV"},
         {1, "I"}};
+    for (int i = 0; i < vec.size(); i++)
+    {
+        while (x >= vec[i].first)
+        {
+            cout << vec[i].second;
+            x -= vec[i].first;
+        }
+    }
+    cout << endl;
 
     return 0;
 }
