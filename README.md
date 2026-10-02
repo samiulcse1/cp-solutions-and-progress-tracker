@@ -35,7 +35,7 @@
 </pre>
 <h3>Language-wise Solved</h3>
 <pre style="font-size:15px; line-height:1.6;">
-✔ C                  :    64
+✔ C                  :     2
 ✔ C++                :     7
 </pre>
 <div style="margin-top:20px;padding:20px;border-radius:12px;background:#0f0f1a;">
