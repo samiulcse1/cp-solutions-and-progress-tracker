@@ -12,14 +12,15 @@ signed main()
     }
     vector<int> vec2(n, 1);
     int curr = 0;
-    while (curr >= 0 && curr < n)
+    while (curr > -1 && curr < n)
     {
+        vec2[curr] = 0;
+        if (vec[curr] == 0)
+        {
+            break;
+        }
         if (vec[curr] % 2 == 0)
         {
-            if (vec[curr] == 0)
-            {
-                break;
-            }
             vec[curr]--;
             curr--;
         }
@@ -28,7 +29,6 @@ signed main()
             vec[curr]--;
             curr++;
         }
-        vec2[curr] = 0;
     }
     int t2 = accumulate(vec.begin(), vec.end(), 0LL);
     int count = accumulate(vec2.begin(), vec2.end(), 0LL);
