@@ -11,7 +11,7 @@ signed main()
         cin >> pp[i].second >> pp[i].first;
     }
     sort(pp.begin(), pp.end());
-    (pp[n - 1].first) < 8.0 ? cout << "Minimum note not reached\n" : cout << pp[n - 1].second << endl;
+    (pp.back().first) < 8.0 ? cout << "Minimum note not reached\n" : cout << pp.back().second << endl;
 
     return 0;
 }
