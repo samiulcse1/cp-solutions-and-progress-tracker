@@ -10,25 +10,30 @@ signed main()
     {
         cin >> vec[i];
     }
-
-    int curr = 0, count = 0;
+    vector<int> vec2(n, 1);
+    int curr = 0;
     while (curr >= 0 && curr < n)
     {
         if (vec[curr] % 2 == 0)
         {
+            if (vec[curr] == 0)
+            {
+                break;
+            }
             vec[curr]--;
-            count++;
             curr--;
-                }
+        }
         else
         {
             vec[curr]--;
-            count++;
             curr++;
         }
+        vec2[curr] = 0;
     }
     int t2 = accumulate(vec.begin(), vec.end(), 0LL);
-    cout << count << " " << t2 << endl;
+    int count = accumulate(vec2.begin(), vec2.end(), 0LL);
+
+    cout << n - count << " " << t2 << endl;
 
     return 0;
 }
