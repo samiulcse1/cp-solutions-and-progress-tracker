@@ -13,6 +13,6 @@ signed main()
         cin >> vc[i];
     }
 
-    cout << count(vc.begin(), vc.end(), target);
+    cout << count(vc.begin(), vc.end(), target) << endl;
     return 0;
 }
