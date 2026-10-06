@@ -16,7 +16,11 @@ signed main()
         }
         int n = count(cc.begin(), cc.end(), a);
         if (n == 0)
-            cout << "Nao existe subsequencia" << endl;
+        {
+            cout << "Caso #" << caso << ":\n";
+            cout << "Nao existe subsequencia" << endl
+                 << endl;
+        }
         else
         {
             int pos = 0;
@@ -28,7 +32,8 @@ signed main()
             }
             cout << "Caso #" << caso << ":\n"
                  << "Qtd.Subsequencias: " << n << "\n"
-                 << "Pos: " << pos << endl;
+                 << "Pos: " << pos << endl
+                 << endl;
         }
         caso++;
     }
