@@ -19,10 +19,18 @@ signed main()
             cout << "Nao existe subsequencia" << endl;
         else
         {
+            int pos = 0;
+
+            for (int i = 0; i < b.size(); i++)
+            {
+                if (b.substr(i, a.size()) == a)
+                    pos = i + 1;
+            }
             cout << "Caso #" << caso << ":\n"
-                 << "Qtd.Subsequencias: " << "" << "\n"
-                 << "" << endl;
+                 << "Qtd.Subsequencias: " << n << "\n"
+                 << "Pos: " << pos << endl;
         }
+        caso++;
     }
 
     return 0;
