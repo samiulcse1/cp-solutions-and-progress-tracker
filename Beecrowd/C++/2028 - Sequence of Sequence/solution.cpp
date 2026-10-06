@@ -10,7 +10,8 @@ signed main()
         if (n == 0)
         {
             cout << "Caso " << caso << ": 1 numero\n";
-            cout << 0 << endl;
+            cout << 0 << endl
+                 << endl;
         }
         else
         {
@@ -33,7 +34,8 @@ signed main()
                     cout << " ";
                 }
             }
-            cout << endl;
+            cout << endl
+                 << endl;
         }
         caso++;
     }
