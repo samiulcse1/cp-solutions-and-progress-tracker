@@ -6,9 +6,10 @@ signed main()
     int n, caso = 1;
     while (cin >> n)
     {
+        n = abs(n);
         if (n == 0)
         {
-            cout << "Caso 1: 1 numero\n";
+            cout << "Caso " << caso << ": 1 numero\n";
             cout << 0 << endl;
         }
         else
@@ -31,9 +32,10 @@ signed main()
                 {
                     cout << " ";
                 }
-                caso++;
             }
+            cout << endl;
         }
+        caso++;
     }
     return 0;
 }
