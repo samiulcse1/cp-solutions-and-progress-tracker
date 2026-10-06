@@ -11,12 +11,14 @@ signed main()
         string name;
         cin >> name;
 
-        if (name == "")
+        if (name == "fechou")
         {
-            s += 2;
+            s++;
         }
-        else
+        else if (s > 0)
+        {
             s--;
+        }
     }
     cout << s << endl;
 
