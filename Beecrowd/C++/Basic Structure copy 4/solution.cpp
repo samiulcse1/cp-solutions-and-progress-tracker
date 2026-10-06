@@ -52,6 +52,7 @@ signed main()
         {
             cout << "Jogador 1 venceu";
         }
+        cout << endl;
     }
     return 0;
 }
