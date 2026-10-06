@@ -39,7 +39,7 @@ signed main()
     return 0;
 }
 /****
- * AI IMPROVED VERSION------ 
+ * AI IMPROVED VERSION------
 int main()
 {
     int n, caso = 1;
@@ -58,5 +58,9 @@ int main()
         caso++;
     }
 }
+
+
+
+basically formula use korayyy shorted......
  *
  */
