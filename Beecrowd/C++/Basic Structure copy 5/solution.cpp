@@ -11,8 +11,9 @@ signed main()
         int val = paid - khorch;
         for (int i = 0; i < notes.size(); i++)
         {
-            if (val > notes[i])
+            if (val >= notes[i])
             {
+                cout << val << endl;
                 val -= notes[i];
             }
         }
