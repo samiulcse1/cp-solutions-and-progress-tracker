@@ -11,7 +11,10 @@ signed main()
         while (n--)
         {
             cin >> a;
-            cout << (a * 2) - 1 << endl;
+            if (a % 2 == 1)
+                cout << (a * 2) - 1 << endl;
+            else
+                cout << (a * 2) - 2 << endl;
         }
     }
 
