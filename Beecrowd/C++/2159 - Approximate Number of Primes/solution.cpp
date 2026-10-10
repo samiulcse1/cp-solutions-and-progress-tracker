@@ -7,9 +7,8 @@ signed main()
     double n;
     cin >> n;
 
-    double ppp = (n / log(n)) * 0.92129;
+    double ppp = n / log(n);
     double nn = 1.25506 * n / log(n);
-    
 
     cout << fixed << setprecision(1) << ppp << " " << nn << endl;
 
