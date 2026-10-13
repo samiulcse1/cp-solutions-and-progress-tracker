@@ -4,5 +4,7 @@ using namespace std;
 signed main()
 {
 
+    int a;
+
     return 0;
 }
