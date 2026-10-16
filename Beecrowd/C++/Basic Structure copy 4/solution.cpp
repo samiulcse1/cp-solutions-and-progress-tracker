@@ -17,7 +17,7 @@ signed main()
             cin >> vec[i];
         }
         sort(vec.begin(), vec.end());
-        double tt = (accumulate(vec.begin(), vec.end(), 0.0) - vec[0] - vec[6]) * d;
+        double tt = (accumulate(vec.begin(), vec.end(), 0.0) - vec[0] - vec[6]) * c;
     }
     return 0;
 }
