@@ -20,7 +20,7 @@ signed main()
         else
             cout << "Valido-Escaleno\n";
 
-        cout << "Retangulo: " << (vec[0] * vec[0] + vec[1] * vec[1] == vec[2] * vec[2] ? 'S' : 'N') << endl;
+        cout << "Retangulo: " << ((vec[0] * vec[0]) + (vec[1] * vec[1]) == (vec[2] * vec[2]) ? 'S' : 'N') << endl;
     }
 
     return 0;
