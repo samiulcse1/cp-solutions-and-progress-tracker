@@ -17,7 +17,8 @@ signed main()
             cin >> vec[i];
         }
         sort(vec.begin(), vec.end());
-        double tt = (accumulate(vec.begin(), vec.end(), 0.0) - vec[0] - vec[6]) * c;
+        double tt = (accumulate(vec.begin(), vec.end(), 0.0) - vec[0] - vec[6]) * ss;
+        cout << name << " " << fixed << setprecision(2) << tt << endl;
     }
     return 0;
 }
