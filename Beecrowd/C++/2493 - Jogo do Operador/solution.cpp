@@ -39,8 +39,20 @@ signed main()
         {
             cout << "You Shall All Pass!" << endl;
         }
+        else if (record.size() == 0)
+        {
+            cout << "None Shall Pass!" << endl;
+        }
+        else
+        {
+            for (int i = 0; i < record.size(); i++)
+            {
+                cout << record[i];
+                if (i == record.size() - 1)
+                    cout << " ";
+            }
+        }
     }
-    +
 
-        return 0;
+    return 0;
 }
