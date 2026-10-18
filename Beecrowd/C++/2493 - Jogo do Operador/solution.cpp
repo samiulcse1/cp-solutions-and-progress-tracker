@@ -8,18 +8,20 @@ signed main()
     while (cin >> test)
     {
         cin.ignore();
-        vector<string> vcc(test);
-
+        //    vector<string> vcc(test);
+        int arr[3][3];
         for (int i = 0; i < test; i++)
         {
-            getline(cin, vcc[i]);
+            // getline(cin, vcc[i]);
+            int aa, bb, dd;
+            string cc;
+            cin
         }
         for (int i = 0; i < test; i++)
         {
             string a, c;
             int b;
             cin >> a >> b >> c;
-            
         }
     }
 
