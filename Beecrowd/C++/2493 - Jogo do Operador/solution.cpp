@@ -16,45 +16,48 @@ signed main()
         for (int i = 0; i < test; i++)
         {
             string a;
-            int index;
+            int index, x, y, z;
             char c;
-            cin >> a;
-            cin.ignore();
-            cin >> index;
-            cin.ignore();
-            cin >> c;
+            cin >> a >> index >> c;
+            int ss = vcc[index - 1].find(' ');
+            int eqq = vcc[index - 1].find('=');
+
+            x = stoi(vcc[index - 1].substr(0, ss));
+            y = stoi(vcc[index - 1].substr(ss + 1, eqq - ss - 1));
+            z = stoi(vcc[index - 1].substr(eqq + 1));
+
             if (c == '+')
             {
-                if (((vcc[index - 1][0] - '0') + (vcc[index - 1][2] - '0')) != (vcc[index - 1][4] - '0'))
+                if (x + y != z)
                 {
                     record.push_back(a);
                 }
             }
             else if (c == '-')
             {
-                if (((vcc[index - 1][0] - '0') - (vcc[index - 1][2] - '0')) != (vcc[index - 1][4] - '0'))
+                if (x - y != z)
                 {
-
                     record.push_back(a);
                 }
             }
             else if (c == '*')
             {
-                if (((vcc[index - 1][0] - '0') * (vcc[index - 1][2] - '0')) != (vcc[index - 1][4] - '0'))
+                if (x * y != z)
                 {
                     record.push_back(a);
                 }
             }
             else if (c == 'I')
             {
-                if (((vcc[index - 1][0] - '0') + (vcc[index - 1][2] - '0') == (vcc[index - 1][4] - '0')) ||
-                    ((vcc[index - 1][0] - '0') - (vcc[index - 1][2] - '0') == (vcc[index - 1][4] - '0')) ||
-                    ((vcc[index - 1][0] - '0') * (vcc[index - 1][2] - '0') == (vcc[index - 1][4] - '0')))
+                if ((x + y == z) ||
+                    (x - y == z) ||
+                    (x * y == z))
                 {
                     record.push_back(a);
                 }
             }
         }
+
         if (record.size() == 0)
         {
             cout << "You Shall All Pass!" << endl;
