@@ -7,24 +7,24 @@ signed main()
     int test;
     while (cin >> test)
     {
-        cin.ignore();
-        vector<string> vcc(test), record;
+        vector<string> record;
+        vector<int> aa(test), bb(test), cc(test);
         for (int i = 0; i < test; i++)
         {
-            getline(cin, vcc[i]);
+            char eq;
+            cin >> aa[i] >> bb[i] >> eq >> cc[i];
         }
         for (int i = 0; i < test; i++)
         {
             string a;
+
             int index, x, y, z;
             char c;
             cin >> a >> index >> c;
-            int ss = vcc[index - 1].find(' ');
-            int eqq = vcc[index - 1].find('=');
 
-            x = stoi(vcc[index - 1].substr(0, ss));
-            y = stoi(vcc[index - 1].substr(ss + 1, eqq - ss - 1));
-            z = stoi(vcc[index - 1].substr(eqq + 1));
+            x = aa[index - 1];
+            y = bb[index - 1];
+            z = cc[index - 1];
 
             if (c == '+')
             {
@@ -57,7 +57,6 @@ signed main()
                 }
             }
         }
-
         if (record.size() == 0)
         {
             cout << "You Shall All Pass!" << endl;
