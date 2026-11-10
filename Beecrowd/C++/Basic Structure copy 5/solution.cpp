@@ -12,9 +12,7 @@ signed main()
 
         for (int l2 = 0; l2 < b; l2++)
         {
-        
-        
-        
+            cin >> arr[l1][l2];
         }
     }
 
