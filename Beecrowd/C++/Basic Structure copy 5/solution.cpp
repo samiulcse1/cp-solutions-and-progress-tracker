@@ -29,8 +29,8 @@ signed main()
                 dd = l2;
             }
         }
-        cout << abs(dd - bb) + abs(cc - aa) << endl;
     }
+    cout << abs(dd - bb) + abs(cc - aa) << endl;
 
     return 0;
 }
