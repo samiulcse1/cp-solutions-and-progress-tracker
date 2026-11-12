@@ -21,11 +21,13 @@ signed main()
         for (int i = 1; i < num; i++)
         {
             if (vcc[i] == vcc[i - 1])
+                bb.push_back(vcc[i]);
             else
                 pp.push_back(vcc[i]);
         }
         reverse(bb.begin(), bb.end());
-        int k = pp.size();
+        set<int> s(bb.begin(), bb.end());
+        int k = pp.size() + s.size();
         pp.insert(pp.end(), bb.begin(), bb.end());
         cout << k << endl;
         for (int i = 0; i < pp.size(); i++)
