@@ -31,7 +31,7 @@ signed main()
             }
             curr = stt[i];
         }
-        (stt[0] == 0) ? cout << count << endl : cout << count << endl;
+        cout << count << endl;
     }
 
     return 0;
