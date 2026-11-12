@@ -20,7 +20,6 @@ signed main()
         if (stt[0] == 1)
         {
             count++;
-            // stt[0] = 0;
         }
         int curr = stt[0];
 
@@ -29,11 +28,10 @@ signed main()
             if (curr == stt[i])
             {
                 count++;
-                (curr == 0) ? stt[i] = 1 : stt[i] = 0;
             }
             curr = stt[i];
         }
-        (stt[0] == 0) ? cout << "------" << count << endl : cout << "------" << count << endl;
+        (stt[0] == 0) ? cout << count << endl : cout << count << endl;
     }
 
     return 0;
