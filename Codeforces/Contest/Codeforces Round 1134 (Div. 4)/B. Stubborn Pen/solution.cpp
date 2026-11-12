@@ -23,10 +23,11 @@ signed main()
             if (curr == stt[i])
             {
                 count++;
-                (stt[i] == 0) ? stt[i] = 1 : stt[i] = 0;
+                (curr == 0) ? stt[i] = 1 : stt[i] = 0;
             }
             curr = stt[i];
         }
+        (stt[0] == 0) ? cout << count << endl : cout << count + 1 << endl;
     }
 
     return 0;
