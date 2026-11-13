@@ -17,19 +17,18 @@ signed main()
                 cin >> numbers[i][j];
             }
         }
+        string result = "Pizza antes de FdI";
         for (int i = 0; i < b; i++)
         {
 
             int cc = count(numbers[i].begin(), numbers[i].end(), 0);
             if (cc == 0)
             {
-                cout << strings[i] << endl;
-            }
-            else
-            {
-                cout << "Pizza antes de FdI" << endl;
+                result = strings[i];
+                break;
             }
         }
+        cout << result << endl;
     }
 
     return 0;
