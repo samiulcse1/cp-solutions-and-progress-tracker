@@ -10,12 +10,16 @@ signed main()
         cout << 1 << endl;
         int c1, c2;
         cin >> c1 >> c2;
-        n--;
-        for (int i = 0; i < n; i++)
+        double avg = c2 / c1;
+        for (int i = 2; i <= n; i++)
         {
-
-            int a, b;
+            double a, b;
             cin >> a >> b;
+            if ((b / a) > avg)
+            {
+                cout << i << endl;
+                avg = b / a;
+            }
         }
     }
 
