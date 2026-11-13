@@ -3,12 +3,11 @@ using namespace std;
 #define int long long
 signed main()
 {
-    int n;
-    cin >> n;
-    while (n--)
+
+    int nn, mm;
+    while (cin >> nn >> mm)
     {
-        int nn, mm;
-        cin >> nn >> mm;
+
         vector<vector<int>> matrix(nn + 1, vector<int>(mm + 1));
         for (int i = 1; i < nn - 1; i++)
         {
