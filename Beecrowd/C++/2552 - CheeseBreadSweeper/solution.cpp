@@ -8,17 +8,17 @@ signed main()
     while (cin >> nn >> mm)
     {
 
-        vector<vector<int>> matrix(nn + 1, vector<int>(mm + 1));
-        for (int i = 1; i < nn; i++)
+        vector<vector<int>> matrix(nn + 2, vector<int>(mm + 2));
+        for (int i = 1; i <= nn; i++)
         {
-            for (int j = 1; j < mm; j++)
+            for (int j = 1; j <= mm; j++)
             {
                 cin >> matrix[i][j];
             }
         }
-        for (int i = 1; i < nn; i++)
+        for (int i = 1; i <= nn; i++)
         {
-            for (int j = 1; j < mm; j++)
+            for (int j = 1; j <= mm; j++)
             {
                 if (matrix[i][j] == 1)
                 {
