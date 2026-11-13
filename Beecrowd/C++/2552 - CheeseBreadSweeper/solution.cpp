@@ -9,16 +9,16 @@ signed main()
     {
 
         vector<vector<int>> matrix(nn + 1, vector<int>(mm + 1));
-        for (int i = 1; i < nn - 1; i++)
+        for (int i = 1; i < nn; i++)
         {
-            for (int j = 1; j < mm - 1; j++)
+            for (int j = 1; j < mm; j++)
             {
                 cin >> matrix[i][j];
             }
         }
-        for (int i = 1; i < nn - 1; i++)
+        for (int i = 1; i < nn; i++)
         {
-            for (int j = 1; j < mm - 1; j++)
+            for (int j = 1; j < mm; j++)
             {
                 if (matrix[i][j] == 1)
                 {
