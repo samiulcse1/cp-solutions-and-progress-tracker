@@ -14,7 +14,7 @@ signed main()
         {
             int a;
             cin >> a;
-            if (a >= nn & a <= nnn)
+            if (a >= nn && a <= nnn)
             {
                 countt++;
             }
