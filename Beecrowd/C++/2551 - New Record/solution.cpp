@@ -7,9 +7,9 @@ signed main()
     int n;
     while (cin >> n)
     {
-        cout << 1 << endl;
-        int c1, c2;
+        double c1, c2;
         cin >> c1 >> c2;
+        cout << 1 << endl;
         double avg = c2 / c1;
         for (int i = 2; i <= n; i++)
         {
