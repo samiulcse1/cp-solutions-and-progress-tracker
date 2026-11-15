@@ -32,12 +32,20 @@ signed main()
                 {
                     cout << 200 << endl;
                 }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 2)
             {
                 if (dd1 < 30 || dd2 < 30 || dd3 < 30 || dd4 < 30)
                 {
                     cout << 200 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
                 }
             }
             else if (l == 3)
@@ -46,42 +54,118 @@ signed main()
                 {
                     cout << 200 << endl;
                 }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
         }
         else if (s == "water")
         {
             if (l == 1)
             {
+                if (dd1 < 10 || dd2 < 10 || dd3 < 10 || dd4 < 10)
+                {
+                    cout << 300 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 2)
             {
+                if (dd1 < 25 || dd2 < 25 || dd3 < 25 || dd4 < 25)
+                {
+                    cout << 300 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 3)
             {
+                if (dd1 < 40 || dd2 < 40 || dd3 < 40 || dd4 < 40)
+                {
+                    cout << 300 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
         }
         else if (s == "earth")
         {
             if (l == 1)
             {
+                if (dd1 < 25 || dd2 < 25 || dd3 < 25 || dd4 < 25)
+                {
+                    cout << 400 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 2)
             {
+                if (dd1 < 55 || dd2 < 55 || dd3 < 55 || dd4 < 55)
+                {
+                    cout << 400 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 3)
             {
+                if (dd1 < 70 || dd2 < 70 || dd3 < 70 || dd4 < 70)
+                {
+                    cout << 400 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
         }
         else if (s == "air")
         {
             if (l == 1)
             {
+                if (dd1 < 18 || dd2 < 18 || dd3 < 18 || dd4 < 18)
+                {
+                    cout << 100 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 2)
             {
+                if (dd1 < 38 || dd2 < 38 || dd3 < 38 || dd4 < 38)
+                {
+                    cout << 100 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
             else if (l == 3)
             {
+                if (dd1 < 60 || dd2 < 60 || dd3 < 60 || dd4 < 60)
+                {
+                    cout << 100 << endl;
+                }
+                else
+                {
+                    cout << 0 << endl;
+                }
             }
         }
     }
