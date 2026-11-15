@@ -4,12 +4,12 @@ using namespace std;
 signed main()
 {
     string t;
+    set<string> cc;
     while (cin >> t)
     {
-        set<string> cc;
         cc.insert(t);
     }
-    
+    cout << cc.size() << endl;
 
     return 0;
 }
