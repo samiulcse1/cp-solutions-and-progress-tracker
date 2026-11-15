@@ -9,9 +9,8 @@ signed main()
     // int cc=0;
     while (t--)
     {
-        int x, y, w, h;
-        cin >> x >> y >> w >> h;
-
+        int w, h, x, y;
+        cin >> w >> h >> x >> y;
         string s;
         int l, a, b;
         cin >> s >> l >> a >> b;
