@@ -3,28 +3,27 @@ using namespace std;
 #define int long long
 signed main()
 {
-    int t;
-    cin >> t;
-
-    for (int i = 1; i <= t; i++)
+    int a, b;
+    cin >> a >> b;
+    int count = b;
+    vector<int> cc(a);
+    for (int i = 0; i < a; i++)
     {
-        string s;
-        int r, g, b;
-        cin >> s >> r >> g >> b;
-
-        int p;
-
-        if (s == "eye")
-            p = (30 * r + 59 * g + 11 * b) / 100;
-        else if (s == "mean")
-            p = (r + g + b) / 3;
-        else if (s == "max")
-            p = max({r, g, b});
-        else if (s == "min")
-            p = min({r, g, b});
-
-        cout << "Caso #" << i << ": " << p << endl;
+        cin >> cc[i];
     }
+    sort(cc.rbegin(), cc.rend());
+    for (int i = b - 1; i < cc.size(); i++)
+    {
+        if (cc[i + 1] != cc[i])
+        {
+            break;
+        }
+        else
+        {
+            count++;
+        }
+    }
+    cout << count << endl;
 
     return 0;
 }
