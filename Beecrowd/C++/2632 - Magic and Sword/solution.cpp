@@ -14,13 +14,13 @@ signed main()
         int l, a, b;
         cin >> s >> l >> a >> b;
 
-        int dx = 0;          
-        if (a < x)           
-            dx = x - a;      
-        else if (a > x + w)   
-            dx = a - (x + w); 
+        int dx = 0;
+        if (a < x)
+            dx = x - a;
+        else if (a > x + w)
+            dx = a - (x + w);
 
-        int dy = 0;         
+        int dy = 0;
         if (b < y)
             dy = y - b;
         else if (b > y + h)
