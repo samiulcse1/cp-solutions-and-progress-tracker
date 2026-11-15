@@ -6,9 +6,10 @@ signed main()
     string t;
     while (cin >> t)
     {
-        set<string> CC;
-        CC.insert(t);
+        set<string> cc;
+        cc.insert(t);
     }
+    
 
     return 0;
 }
