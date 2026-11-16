@@ -1,0 +1,118 @@
+name: Dynamic Problem Statistics
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate statistics
+        run: |
+          rm -f platform.txt language.txt
+          total=0
+
+          # ---------------- PLATFORM ----------------
+          for platform in */ ; do
+            case "$platform" in
+              .github/|Templates/|.git/) continue ;;
+            esac
+
+            count=$(find "$platform" -mindepth 2 -type d 2>/dev/null | wc -l)
+
+            if [ "$count" -gt 0 ]; then
+              printf "%-18s %d\n" "${platform%/}" "$count" >> platform.txt
+              total=$((total + count))
+            fi
+          done
+
+          # ---------------- LANGUAGE ----------------
+          declare -A lang_map
+
+          for dir in $(find . -mindepth 2 -type d); do
+            [[ "$dir" == *".git"* ]] && continue
+
+            lang=$(basename "$dir")
+
+            case "$lang" in
+              C|C++|Java|Python)
+                count=$(find "$dir" -mindepth 1 -type d | wc -l)
+                lang_map["$lang"]=$((lang_map["$lang"] + count))
+                ;;
+            esac
+          done
+
+          for key in "${!lang_map[@]}"; do
+            printf "%-18s %d\n" "$key" "${lang_map[$key]}" >> language.txt
+          done
+
+          echo "TOTAL=$total" >> $GITHUB_ENV
+
+      - name: Update README (STRICT REPLACE)
+        run: |
+          START="<!-- START_STATS -->"
+          END="<!-- END_STATS -->"
+
+          awk -v total="$TOTAL" -v start="$START" -v end="$END" '
+          $0 ~ start {
+            print $0
+            print ""
+            print "<div align=\"center\">"
+            print "<h2 style=\"font-size:26px; color:#7C4DFF;\">🔴 LIVE STATISTICS DASHBOARD</h2>"
+
+            print "<h3>Platform-wise Solved</h3>"
+            print "<pre style=\"font-size:15px; line-height:1.6;\">"
+            while ((getline line < "platform.txt") > 0) {
+              split(line,a," ")
+              printf "✔ %-18s : %5s\n", a[1], a[2]
+            }
+            print "</pre>"
+
+            print "<h3>Language-wise Solved</h3>"
+            print "<pre style=\"font-size:15px; line-height:1.6;\">"
+            while ((getline line < "language.txt") > 0) {
+              split(line,a," ")
+              printf "✔ %-18s : %5s\n", a[1], a[2]
+            }
+            print "</pre>"
+
+            print "<div style=\"margin-top:20px;padding:20px;border-radius:12px;background:#0f0f1a;\">"
+            print "<div style=\"font-size:14px;color:#aaa;\">🕊️ 𝐓𝐎𝐓𝐀𝐋 𝐒𝐎𝐋𝐕𝐄𝐃 🕊️</div>"
+            print "<div style=\"font-size:60px;color:#00C2FF;font-weight:bold;\">✅ " total "</div>"
+            print "</div>"
+
+            print "</div>"
+
+            skip=1
+          }
+
+          $0 ~ end {
+            skip=0
+            print $0
+            next
+          }
+
+          skip==1 { next }
+
+          { print }
+          ' README.md > temp.md && mv temp.md README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          git diff --cached --quiet || git commit -m "Auto update stats"
+
+          git push
