@@ -7,9 +7,11 @@ signed main()
     cin >> a >> b >> c;
     if (b + c <= a)
     {
+        cout << "Farei hoje!" << endl;
     }
     else
     {
+        cout << "Deixa para amanha!" << endl;
     }
     return 0;
 }
