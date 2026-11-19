@@ -8,7 +8,7 @@ signed main()
     double c, d;
 
     cin >> a >> b >> c >> d;
-
+    cout << fixed << setprecision(6);
     cout << "A = " << a << ", B = " << b << endl;
     cout << "C = " << c << ", D = " << d << endl;
 
